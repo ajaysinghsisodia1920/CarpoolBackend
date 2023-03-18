@@ -1,0 +1,12 @@
+C:\Users\ajay.s\source\repos\Carpool.Model\bin\Debug\net6.0\Carpool.Model.deps.json
+C:\Users\ajay.s\source\repos\Carpool.Model\bin\Debug\net6.0\Carpool.Model.dll
+C:\Users\ajay.s\source\repos\Carpool.Model\bin\Debug\net6.0\Carpool.Model.pdb
+C:\Users\ajay.s\source\repos\Carpool.Model\obj\Debug\net6.0\Carpool.Model.csproj.AssemblyReference.cache
+C:\Users\ajay.s\source\repos\Carpool.Model\obj\Debug\net6.0\Carpool.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ajay.s\source\repos\Carpool.Model\obj\Debug\net6.0\Carpool.Model.AssemblyInfoInputs.cache
+C:\Users\ajay.s\source\repos\Carpool.Model\obj\Debug\net6.0\Carpool.Model.AssemblyInfo.cs
+C:\Users\ajay.s\source\repos\Carpool.Model\obj\Debug\net6.0\Carpool.Model.csproj.CoreCompileInputs.cache
+C:\Users\ajay.s\source\repos\Carpool.Model\obj\Debug\net6.0\Carpool.Model.dll
+C:\Users\ajay.s\source\repos\Carpool.Model\obj\Debug\net6.0\refint\Carpool.Model.dll
+C:\Users\ajay.s\source\repos\Carpool.Model\obj\Debug\net6.0\Carpool.Model.pdb
+C:\Users\ajay.s\source\repos\Carpool.Model\obj\Debug\net6.0\ref\Carpool.Model.dll

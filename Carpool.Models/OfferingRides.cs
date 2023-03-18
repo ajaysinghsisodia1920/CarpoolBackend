@@ -12,20 +12,22 @@ namespace Carpool.DataStorage
         [Key]
         public int Id { get; set; }
 
+        public string RideBookerName { get; set; }
+
         public string Source { get; set; }
 
-        public string Destination { get; set; } 
+        public string Destination { get; set; }
 
         public DateTime Date { get; set; }
 
         public TimeSpan TimeSpan { get; set; }
 
-        public int UserId { get; set; } 
+        public int UserId { get; set; }
 
-
-        public OfferingRides(string Source,string Destination) {
-            this.Source= Source;
-            this.Destination= Destination;
+        public OfferingRides(string Source, string Destination)
+        {
+            this.Source = Source;
+            this.Destination = Destination;
         }
     }
 }

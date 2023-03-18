@@ -69,3 +69,6 @@ C:\Users\ajay.s\source\repos\Carpool\bin\Debug\net6.0\Carpool.DataStorage.pdb
 C:\Users\ajay.s\source\repos\Carpool\obj\Debug\net6.0\Carpool.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ajay.s\source\repos\Carpool\obj\Debug\net6.0\Carpool.Properties.Resources.resources
 C:\Users\ajay.s\source\repos\Carpool\obj\Debug\net6.0\Carpool.csproj.GenerateResource.cache
+C:\Users\ajay.s\source\repos\Carpool\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ajay.s\source\repos\Carpool\bin\Debug\net6.0\Carpool.Model.dll
+C:\Users\ajay.s\source\repos\Carpool\bin\Debug\net6.0\Carpool.Model.pdb

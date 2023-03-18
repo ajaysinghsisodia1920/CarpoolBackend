@@ -7,6 +7,7 @@ namespace Carpool.DataStorage
         [Key]
         public int Id { get; set; }
 
+        public string RideOfferName { get; set; }
         public string Source { get; set; }
 
         public string Destination { get; set; }

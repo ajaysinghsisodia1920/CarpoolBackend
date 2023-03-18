@@ -14,11 +14,9 @@ namespace Carpool.DataStorage
 
         public string EmailId { get; set; }
 
-        public string Username { get; set; }    
+        public string Username { get; set; }
 
         public string Password { get; set; }
-
-        //List<BookedRides> BookedRides { get; set; }
 
     }
 }

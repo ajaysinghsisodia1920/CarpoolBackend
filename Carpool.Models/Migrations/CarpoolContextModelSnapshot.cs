@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Carpool.Models.Migrations
+namespace Carpool.DataStorage.Migrations
 {
     [DbContext(typeof(CarpoolContext))]
     partial class CarpoolContextModelSnapshot : ModelSnapshot
@@ -22,18 +22,25 @@ namespace Carpool.Models.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Carpool.Models.BookedRides", b =>
+            modelBuilder.Entity("Carpool.DataStorage.BookedRides", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("BookingDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<TimeSpan>("BookingTimeSpan")
+                    b.Property<TimeSpan>("BookingTime")
                         .HasColumnType("time");
 
                     b.Property<string>("Destination")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RideOfferName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -41,24 +48,30 @@ namespace Carpool.Models.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.ToTable("BookedRides");
                 });
 
-            modelBuilder.Entity("Carpool.Models.OfferingRides", b =>
+            modelBuilder.Entity("Carpool.DataStorage.OfferingRides", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Destination")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RideBookerName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -69,19 +82,21 @@ namespace Carpool.Models.Migrations
                     b.Property<TimeSpan>("TimeSpan")
                         .HasColumnType("time");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.ToTable("Offerings");
                 });
 
-            modelBuilder.Entity("Carpool.Models.User", b =>
+            modelBuilder.Entity("Carpool.DataStorage.User", b =>
                 {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"), 1L, 1);
 
                     b.Property<string>("EmailId")
                         .IsRequired()

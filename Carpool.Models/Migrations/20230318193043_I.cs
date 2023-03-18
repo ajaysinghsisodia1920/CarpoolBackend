@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Carpool.Models.Migrations
+namespace Carpool.DataStorage.Migrations
 {
-    public partial class firstmigration : Migration
+    public partial class I : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,25 +18,12 @@ namespace Carpool.Models.Migrations
                     Source = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Destination = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BookingDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    BookingTimeSpan = table.Column<TimeSpan>(type: "time", nullable: false)
+                    BookingTime = table.Column<TimeSpan>(type: "time", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_BookedRides", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Employees",
-                columns: table => new
-                {
-                    UserId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Employees", x => x.UserId);
                 });
 
             migrationBuilder.CreateTable(
@@ -45,6 +32,7 @@ namespace Carpool.Models.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    RideBookerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Source = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Destination = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -55,6 +43,21 @@ namespace Carpool.Models.Migrations
                 {
                     table.PrimaryKey("PK_Offerings", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    UserId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    EmailId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.UserId);
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -63,10 +66,10 @@ namespace Carpool.Models.Migrations
                 name: "BookedRides");
 
             migrationBuilder.DropTable(
-                name: "Employees");
+                name: "Offerings");
 
             migrationBuilder.DropTable(
-                name: "Offerings");
+                name: "Users");
         }
     }
 }

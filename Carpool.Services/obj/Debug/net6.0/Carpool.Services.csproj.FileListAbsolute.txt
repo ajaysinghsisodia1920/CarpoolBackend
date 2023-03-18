@@ -13,3 +13,5 @@ C:\Users\ajay.s\source\repos\Carpool.Services\obj\Debug\net6.0\ref\Carpool.Servi
 C:\Users\ajay.s\source\repos\Carpool.Services\obj\Debug\net6.0\Carpool.Services.csproj.CopyComplete
 C:\Users\ajay.s\source\repos\Carpool.Services\bin\Debug\net6.0\Carpool.DataStorage.dll
 C:\Users\ajay.s\source\repos\Carpool.Services\bin\Debug\net6.0\Carpool.DataStorage.pdb
+C:\Users\ajay.s\source\repos\Carpool.Services\bin\Debug\net6.0\Carpool.Model.dll
+C:\Users\ajay.s\source\repos\Carpool.Services\bin\Debug\net6.0\Carpool.Model.pdb

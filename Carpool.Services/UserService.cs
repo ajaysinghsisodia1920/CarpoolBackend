@@ -29,7 +29,7 @@ namespace Carpool.Services
             user.Username = user.EmailId.Split('@')[0];
             context.Users.Add(user);
             context.SaveChanges();
-            return  true;
+            return true;
         }
 
         public bool LoginUser(User user)
@@ -47,7 +47,7 @@ namespace Carpool.Services
             var result = context.Users.Where(u => u.EmailId == email).FirstOrDefault();
             if (result == null)
             {
-                return false ;
+                return false;
             }
 
             context.Users.Remove(result);

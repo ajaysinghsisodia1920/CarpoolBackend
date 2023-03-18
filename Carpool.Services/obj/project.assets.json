@@ -747,6 +747,16 @@
         "runtime": {
           "bin/placeholder/Carpool.DataStorage.dll": {}
         }
+      },
+      "Carpool.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Carpool.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Carpool.Model.dll": {}
+        }
       }
     }
   },
@@ -1916,11 +1926,17 @@
       "type": "project",
       "path": "../Carpool.Models/Carpool.DataStorage.csproj",
       "msbuildProject": "../Carpool.Models/Carpool.DataStorage.csproj"
+    },
+    "Carpool.Model/1.0.0": {
+      "type": "project",
+      "path": "../Carpool.Model/Carpool.Model.csproj",
+      "msbuildProject": "../Carpool.Model/Carpool.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Carpool.DataStorage >= 1.0.0"
+      "Carpool.DataStorage >= 1.0.0",
+      "Carpool.Model >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1958,6 +1974,9 @@
           "projectReferences": {
             "C:\\Users\\ajay.s\\source\\repos\\Carpool.Models\\Carpool.DataStorage.csproj": {
               "projectPath": "C:\\Users\\ajay.s\\source\\repos\\Carpool.Models\\Carpool.DataStorage.csproj"
+            },
+            "C:\\Users\\ajay.s\\source\\repos\\Carpool.Model\\Carpool.Model.csproj": {
+              "projectPath": "C:\\Users\\ajay.s\\source\\repos\\Carpool.Model\\Carpool.Model.csproj"
             }
           }
         }

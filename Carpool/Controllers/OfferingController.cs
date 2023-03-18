@@ -1,12 +1,16 @@
 ﻿using Carpool.DataStorage;
 using Carpool.Services;
 using Carpool.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Carpool.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [EnableCors("devCorsPolicy")]
+    //[Authorize]
     public class OfferingController : Controller
     {
         private readonly IOfferingService offeringService;
@@ -27,15 +31,15 @@ namespace Carpool.Controllers
         }
 
         [HttpGet("SearchRides")]
-        public IActionResult SearchOfferingRides(string email, string source, string destination, DateOnly rideDate, TimeSpan rideStartTime)
+        public IActionResult SearchOfferingRides(string email, string source, string destination)
         {
-            return Ok(offeringService.SearchOfferingRides(email, source, destination,rideDate, rideStartTime));  
+            return Ok(offeringService.SearchOfferingRides(email, source, destination));
         }
 
         [HttpPost("AddRides")]
         public IActionResult AddOfferingRides(string email, OfferingRides offeringRides)
         {
-            return Ok(offeringService.AddOfferingRides(email,offeringRides));
+            return Ok(offeringService.AddOfferingRides(email, offeringRides));
         }
     }
 }

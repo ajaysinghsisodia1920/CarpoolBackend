@@ -9,5 +9,7 @@ namespace Carpool.Services.Interfaces
     public interface ISharedService
     {
         public int GetUserId(string email);
+
+        public string GetUserName(int userId);
     }
 }
